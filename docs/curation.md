@@ -80,3 +80,16 @@ Before publication, confirm that:
 - deterministic scripts have been executed successfully;
 - the skill passes `node scripts/validate-skills.mjs`;
 - a reviewer can explain what the artifact does, does not do, and why it is public.
+
+## Provenance and third-party material
+
+Generalization does not erase authorship. Before publishing a skill, trace its history through local lockfiles, Git history, skills.sh, and the upstream repository as applicable.
+
+- Record every skill in `skill-provenance.json`, including Inttegro-authored skills.
+- If any material came from a skills.sh package or GitHub repository, name and link the upstream skill and repository in both `PROVENANCE.md` and the affected `SKILL.md`.
+- Describe the relationship honestly: unchanged copy, adapted copy, derived rewrite, or original synthesis.
+- Preserve the upstream copyright and license notice inside the independently installable skill directory whenever the license requires it.
+- Do not describe copied or adapted material as independently authored merely because filenames, structure, wording, or platform metadata changed.
+- If the exact imported revision was not recorded, say `not recorded`; do not substitute the current upstream revision.
+
+Publication is blocked when provenance or redistribution rights cannot be established.

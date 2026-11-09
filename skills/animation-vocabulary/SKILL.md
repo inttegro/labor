@@ -171,3 +171,9 @@ _A compact working glossary for identifying common interface-motion patterns._
 - **Spatial consistency** — Animating so an element keeps its identity and position across states, so users never lose track of where things went.
 - **Hardware acceleration** — Animating transform and opacity lets the GPU keep motion smooth.
 - **Reduced motion** — Respecting the user's prefers-reduced-motion setting by toning down or removing motion.
+
+## Origin and license
+
+This skill is adapted from Emil Kowalski's [`animation-vocabulary`](https://github.com/emilkowalski/skills/tree/main/skills/animation-vocabulary) skill, sourced from the `emilkowalski/skills` GitHub repository. Labor changes its packaging and invocation guidance, but retains substantial upstream glossary material.
+
+The upstream work is MIT-licensed, Copyright (c) 2026 Emil Kowalski. The required notice is preserved in [LICENSE](LICENSE). Labor is not affiliated with or endorsed by Emil Kowalski.

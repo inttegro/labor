@@ -6,6 +6,7 @@ import { join, relative } from "node:path";
 const root = new URL("../", import.meta.url).pathname;
 const skillsRoot = join(root, "skills");
 const manifestPath = join(root, "skills.sh.json");
+const provenancePath = join(root, "skill-provenance.json");
 const errors = [];
 
 function fail(path, message) {
@@ -77,6 +78,44 @@ if (!existsSync(manifestPath)) {
   if (duplicates.length) errors.push(`skills.sh.json: duplicate skills: ${[...new Set(duplicates)].join(", ")}`);
   if (missing.length) errors.push(`skills.sh.json: ungrouped skills: ${missing.join(", ")}`);
   if (unknown.length) errors.push(`skills.sh.json: unknown skills: ${unknown.join(", ")}`);
+}
+
+if (!existsSync(provenancePath)) {
+  errors.push("skill-provenance.json: file is missing");
+} else {
+  const provenance = JSON.parse(readFileSync(provenancePath, "utf8"));
+  const records = provenance.skills ?? {};
+  const recorded = Object.keys(records).sort();
+  const missing = skillNames.filter((name) => !recorded.includes(name));
+  const unknown = recorded.filter((name) => !skillNames.includes(name));
+
+  if (missing.length) errors.push(`skill-provenance.json: missing skills: ${missing.join(", ")}`);
+  if (unknown.length) errors.push(`skill-provenance.json: unknown skills: ${unknown.join(", ")}`);
+
+  for (const name of skillNames) {
+    const record = records[name];
+    if (!record) continue;
+    if (!record.origin) fail(provenancePath, `${name} is missing origin`);
+    if (!record.relationship) fail(provenancePath, `${name} is missing relationship`);
+
+    if (record.origin === "third-party") {
+      if (!record.source_url?.startsWith("https://github.com/")) {
+		fail(provenancePath, `${name} must link its upstream GitHub source`);
+      }
+      if (!record.license) fail(provenancePath, `${name} is missing its upstream license`);
+      if (!record.license_file) {
+		fail(provenancePath, `${name} is missing license_file`);
+      } else if (!existsSync(join(root, record.license_file))) {
+		fail(provenancePath, `${name} license file does not exist: ${record.license_file}`);
+      }
+
+      const skillPath = join(skillsRoot, name, "SKILL.md");
+      const source = readFileSync(skillPath, "utf8");
+      if (!source.includes(record.source_url)) {
+		fail(skillPath, "must link the upstream source recorded in skill-provenance.json");
+      }
+    }
+  }
 }
 
 if (errors.length) {

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": 1,
+  "skills": {
+    "animation-vocabulary": {
+      "origin": "third-party",
+      "relationship": "Adapted copy retaining substantial upstream glossary material.",
+      "source_name": "Emil Kowalski: animation-vocabulary",
+      "source_url": "https://github.com/emilkowalski/skills/tree/main/skills/animation-vocabulary",
+      "source_revision": "not_recorded",
+      "license": "MIT",
+      "license_file": "skills/animation-vocabulary/LICENSE"
+    },
+    "apple-charts": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of cited official Apple Developer chart guidance; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/charts"
+    },
+    "apple-hig-components": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/components"
+    },
+    "apple-hig-foundations": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/foundations"
+    },
+    "apple-hig-getting-started": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/getting-started"
+    },
+    "apple-hig-inputs": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/inputs"
+    },
+    "apple-hig-patterns": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/patterns"
+    },
+    "apple-hig-technologies": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of official Apple HIG documentation; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/technologies"
+    },
+    "apple-sheets": {
+      "origin": "inttegro-authored-synthesis",
+      "relationship": "Original Inttegro synthesis of cited official Apple sheet and presentation guidance; not imported from a third-party skill repository.",
+      "source_url": "https://developer.apple.com/design/human-interface-guidelines/sheets"
+    },
+    "batch-commit": {
+      "origin": "inttegro-authored",
+      "relationship": "Original workflow originating in the Inttegro Commerce codebase; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "fluid-interface-design": {
+      "origin": "third-party",
+      "relationship": "Substantial rewrite derived from the upstream apple-design skill.",
+      "source_name": "Emil Kowalski: apple-design",
+      "source_url": "https://github.com/emilkowalski/skills/tree/main/skills/apple-design",
+      "source_revision": "not_recorded",
+      "license": "MIT",
+      "license_file": "skills/fluid-interface-design/LICENSE"
+    },
+    "git-change-control": {
+      "origin": "inttegro-authored",
+      "relationship": "Original generalization of Inttegro shared-checkout and Git change-control practice; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "improve-animations": {
+      "origin": "third-party",
+      "relationship": "Adapted copy retaining the upstream audit-then-plan design and substantial guidance.",
+      "source_name": "Emil Kowalski: improve-animations",
+      "source_url": "https://github.com/emilkowalski/skills/tree/main/skills/improve-animations",
+      "source_revision": "not_recorded",
+      "license": "MIT",
+      "license_file": "skills/improve-animations/LICENSE"
+    },
+    "marketing-art-direction": {
+      "origin": "inttegro-authored",
+      "relationship": "Original Inttegro workflow with public influences cited inside its references; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "marketing-product-media": {
+      "origin": "inttegro-authored",
+      "relationship": "Original Inttegro product-media direction workflow; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "marketing-reference-forensics": {
+      "origin": "inttegro-authored",
+      "relationship": "Original Inttegro public-reference research workflow; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "marketing-visual-qa": {
+      "origin": "inttegro-authored",
+      "relationship": "Original Inttegro visual acceptance workflow; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "message-delivery-integrity": {
+      "origin": "inttegro-authored",
+      "relationship": "Original generalization of Inttegro messaging and delivery-evidence practice; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "product-marketing-personas": {
+      "origin": "inttegro-authored",
+      "relationship": "Original generalization of internally maintained marketing-copy workflows, calibrated against public marketing material; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "production-verification": {
+      "origin": "inttegro-authored",
+      "relationship": "Original generalization of Inttegro production-evidence and incident-verification practice; no third-party skill package was copied.",
+      "source_url": null
+    },
+    "security-audit": {
+      "origin": "third-party",
+      "relationship": "Adapted copy retaining Cloudflare's core workflow and substantial guidance.",
+      "source_name": "Cloudflare: security-audit-skill",
+      "source_url": "https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit",
+      "source_revision": "not_recorded",
+      "license": "MIT",
+      "license_file": "skills/security-audit/LICENSE"
+    },
+    "systems-builder-writing": {
+      "origin": "inttegro-authored",
+      "relationship": "Original generalization of internal systems-writing guidance; no third-party skill package was copied.",
+      "source_url": null
+    }
+  }
+}

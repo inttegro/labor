@@ -190,3 +190,9 @@ Do not end the run before one of exactly two terminal states: (a) all Phase 6 ar
 8. Re-reporting carried same-source prior confirmed records or using them as exemplars that anchor the hunt.
 9. Assigning severity to `needs_validation` records.
 10. Writing the report before independent verification or letting prose and JSON disagree.
+
+## Origin and license
+
+This skill is adapted from Cloudflare's [`security-audit-skill`](https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit). Labor reorganized the upstream companion documents under `references/` and validation assets under `scripts/`, and added local packaging metadata; the core workflow and substantial guidance originate with Cloudflare.
+
+The upstream work is MIT-licensed, Copyright (c) 2025-2026 Cloudflare, Inc. The required notice is preserved in [LICENSE](LICENSE). Labor is not affiliated with or endorsed by Cloudflare.

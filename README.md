@@ -71,6 +71,12 @@ npx skills add inttegro/labor --skill systems-builder-writing
 
 Read [the curation policy](docs/curation.md) before proposing a new skill or adapting internal work.
 
+## Provenance
+
+Every published skill has an explicit origin record in [the provenance ledger](PROVENANCE.md). The machine-readable [skill provenance manifest](skill-provenance.json) is validated against the catalog so a skill cannot be added without declaring whether it is Inttegro-authored, an original synthesis of public documentation, or adapted from a third-party skill.
+
+Third-party-derived skill directories also carry the upstream copyright and license notice required when that skill is installed on its own. Labor's repository license applies only to Inttegro-authored material and Inttegro's modifications; it does not erase an upstream notice.
+
 ## Repository structure
 
 - `skills/` — independently installable agent skills.
@@ -94,6 +100,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change. Security issue
 
 ## License
 
-Unless a subdirectory says otherwise, this repository is available under the [MIT License](LICENSE).
+Unless a subdirectory says otherwise, Inttegro-authored material in this repository is available under the [MIT License](LICENSE). Third-party-derived material retains its upstream notice in the affected skill directory and is catalogued in [PROVENANCE.md](PROVENANCE.md).
 
 Apple, its platforms, and related product names are trademarks of Apple Inc. Labor is an independent project and is not affiliated with or endorsed by Apple.

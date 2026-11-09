@@ -108,4 +108,6 @@ Read [materials, type, and accessibility](references/materials-type-accessibilit
 
 ## Sources and Attribution
 
-The interaction principles are independently paraphrased from public sources, including Apple's [Designing Fluid Interfaces](https://developer.apple.com/videos/play/wwdc2018/803/) session and web-platform documentation. Product names and trademarks belong to their respective owners. This skill is not affiliated with or endorsed by Apple.
+This skill is a substantial rewrite derived from Emil Kowalski's [`apple-design`](https://github.com/emilkowalski/skills/tree/main/skills/apple-design) skill, sourced from the `emilkowalski/skills` GitHub repository. Labor generalized the platform framing, rewrote the workflow, and split implementation detail into references; that modification does not erase the upstream origin.
+
+The interaction principles also draw on public sources, including Apple's [Designing Fluid Interfaces](https://developer.apple.com/videos/play/wwdc2018/803/) session and web-platform documentation. The upstream skill is MIT-licensed, Copyright (c) 2026 Emil Kowalski; its required notice is preserved in [LICENSE](LICENSE). Product names and trademarks belong to their respective owners. Labor is not affiliated with or endorsed by Emil Kowalski or Apple.

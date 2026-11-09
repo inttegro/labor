@@ -23,8 +23,11 @@ Each skill lives at `skills/<skill-name>/SKILL.md` and must:
 - avoid named-company or named-person imitation;
 - avoid private services, data, paths, credentials, and operating policy;
 - include `agents/openai.yaml` with consistent interface metadata.
+- declare its origin in `skill-provenance.json`;
+- name and link every third-party skill package from which it copies or adapts material;
+- preserve the upstream copyright and license notice inside its own directory when it contains a substantial third-party copy or adaptation.
 
-Add the skill to the appropriate group in `skills.sh.json` and the catalog in `README.md`.
+Add the skill to the appropriate group in `skills.sh.json`, the catalog in `README.md`, and the human-readable ledger in `PROVENANCE.md`.
 
 ## Development workflow
 
