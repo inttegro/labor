@@ -1,0 +1,4 @@
+interface:
+  display_name: "Batch Commit"
+  short_description: "Plan logical Git commit batches safely"
+  default_prompt: "Use $batch-commit to group these changes into logical commit batches with precise staging scope."
