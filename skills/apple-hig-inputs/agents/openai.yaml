@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Inputs"
+  short_description: "Design for Apple device input methods"
+  default_prompt: "Use $apple-hig-inputs to design this interaction for Apple input methods."

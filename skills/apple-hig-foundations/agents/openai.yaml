@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Foundations"
+  short_description: "Apply Apple interface foundations"
+  default_prompt: "Use $apple-hig-foundations to review this Apple-platform interface foundation."

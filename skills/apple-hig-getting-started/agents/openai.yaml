@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Getting Started"
+  short_description: "Choose an Apple platform design strategy"
+  default_prompt: "Use $apple-hig-getting-started to choose the right Apple-platform design approach."

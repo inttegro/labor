@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Technologies"
+  short_description: "Integrate Apple platform technologies"
+  default_prompt: "Use $apple-hig-technologies to design this Apple technology integration."

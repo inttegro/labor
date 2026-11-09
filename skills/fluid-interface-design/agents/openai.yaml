@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fluid Interface Design"
+  short_description: "Build responsive physical interactions"
+  default_prompt: "Use $fluid-interface-design to make this interaction responsive, interruptible, and accessible."

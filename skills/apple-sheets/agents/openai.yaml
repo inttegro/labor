@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Sheets"
+  short_description: "Design native Apple modal surfaces"
+  default_prompt: "Use $apple-sheets to design or review this Apple-platform sheet or modal surface."

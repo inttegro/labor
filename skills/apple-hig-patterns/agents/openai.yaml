@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Patterns"
+  short_description: "Design familiar Apple-platform workflows"
+  default_prompt: "Use $apple-hig-patterns to shape this Apple-platform workflow."

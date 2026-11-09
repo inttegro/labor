@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Charts"
+  short_description: "Design accessible Apple-native charts"
+  default_prompt: "Use $apple-charts to design or review this Apple-platform chart."

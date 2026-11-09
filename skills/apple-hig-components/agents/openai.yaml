@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Components"
+  short_description: "Choose Apple-native interface components"
+  default_prompt: "Use $apple-hig-components to select and review the right Apple-platform components."
