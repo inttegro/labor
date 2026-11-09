@@ -1,0 +1,44 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Writing and communication",
+      "description": "Build clear product narratives and evidence-led arguments without imitating a named company or person.",
+      "skills": [
+        "product-marketing-personas",
+        "systems-builder-writing"
+      ]
+    },
+    {
+      "title": "Design and interaction",
+      "description": "Design responsive interfaces and apply platform-specific guidance without imitating a company's visual identity.",
+      "skills": [
+        "fluid-interface-design",
+        "apple-hig-getting-started",
+        "apple-hig-foundations",
+        "apple-hig-components",
+        "apple-hig-patterns",
+        "apple-hig-inputs",
+        "apple-hig-technologies",
+        "apple-charts",
+        "apple-sheets"
+      ]
+    },
+    {
+      "title": "Engineering workflows",
+      "description": "Make code and history changes with explicit ownership and auditable scope.",
+      "skills": [
+        "git-change-control"
+      ]
+    },
+    {
+      "title": "Reliability and evaluation",
+      "description": "Verify production claims and preserve honest evidence across external systems.",
+      "skills": [
+        "production-verification",
+        "message-delivery-integrity"
+      ]
+    }
+  ]
+}
