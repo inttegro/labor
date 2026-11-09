@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Audit"
+  short_description: "Run source-first defensive security reviews"
+  default_prompt: "Use $security-audit to review this codebase for source-grounded security boundary failures using safe local evidence."
