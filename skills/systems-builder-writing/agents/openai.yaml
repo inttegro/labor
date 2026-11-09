@@ -1,0 +1,4 @@
+interface:
+  display_name: "Systems Builder Writing"
+  short_description: "Write with first-principles systems reasoning"
+  default_prompt: "Use $systems-builder-writing to make this argument concrete, direct, and evidence-led."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Message Delivery Integrity"
+  short_description: "Verify authoring, preview, send, and delivery"
+  default_prompt: "Use $message-delivery-integrity to trace this message from authoring through provider evidence."

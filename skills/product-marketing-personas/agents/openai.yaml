@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Marketing Personas"
+  short_description: "Select a buyer-centered marketing voice"
+  default_prompt: "Use $product-marketing-personas to draft this page with the best-fit buyer persona."

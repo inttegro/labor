@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Change Control"
+  short_description: "Commit safely in shared dirty checkouts"
+  default_prompt: "Use $git-change-control to isolate and commit only the changes from this task."

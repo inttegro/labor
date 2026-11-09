@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Verification"
+  short_description: "Separate implementation from live proof"
+  default_prompt: "Use $production-verification to establish what is actually deployed and working."
