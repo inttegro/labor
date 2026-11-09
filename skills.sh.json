@@ -15,6 +15,12 @@
       "description": "Design responsive interfaces and apply platform-specific guidance without imitating a company's visual identity.",
       "skills": [
         "fluid-interface-design",
+        "animation-vocabulary",
+        "improve-animations",
+        "marketing-art-direction",
+        "marketing-product-media",
+        "marketing-reference-forensics",
+        "marketing-visual-qa",
         "apple-hig-getting-started",
         "apple-hig-foundations",
         "apple-hig-components",
@@ -29,7 +35,8 @@
       "title": "Engineering workflows",
       "description": "Make code and history changes with explicit ownership and auditable scope.",
       "skills": [
-        "git-change-control"
+        "git-change-control",
+        "batch-commit"
       ]
     },
     {
@@ -37,7 +44,8 @@
       "description": "Verify production claims and preserve honest evidence across external systems.",
       "skills": [
         "production-verification",
-        "message-delivery-integrity"
+        "message-delivery-integrity",
+        "security-audit"
       ]
     }
   ]

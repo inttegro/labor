@@ -18,6 +18,12 @@ Labor is where Inttegro publishes work that remains useful without Inttegro prod
 | Skill | Purpose |
 | --- | --- |
 | [`fluid-interface-design`](skills/fluid-interface-design) | Build responsive, interruptible, physical-feeling interactions without imitating a named product's visual identity. |
+| [`animation-vocabulary`](skills/animation-vocabulary) | Translate vague descriptions of interface motion into precise, reusable terminology. |
+| [`improve-animations`](skills/improve-animations) | Audit a codebase's motion system and write prioritized, executable improvement plans without modifying source. |
+| [`marketing-art-direction`](skills/marketing-art-direction) | Turn a selected marketing direction into an implementable composition, typography, material, narrative, and responsive contract. |
+| [`marketing-product-media`](skills/marketing-product-media) | Direct truthful product demonstrations, photography, diagrams, motion scenes, and responsive fallbacks. |
+| [`marketing-reference-forensics`](skills/marketing-reference-forensics) | Study public marketing references visually and technically without cloning them or claiming private-source access. |
+| [`marketing-visual-qa`](skills/marketing-visual-qa) | Evaluate rendered marketing work against its approved direction, reference evidence, and conversion-path intent. |
 | [`apple-hig-getting-started`](skills/apple-hig-getting-started) | Choose an Apple-platform strategy before selecting lower-level patterns and components. |
 | [`apple-hig-foundations`](skills/apple-hig-foundations) | Apply Apple HIG guidance for accessibility, layout, type, color, materials, privacy, and motion. |
 | [`apple-hig-components`](skills/apple-hig-components) | Select Apple-platform controls, navigation, presentation, status, and system components. |
@@ -32,6 +38,7 @@ Labor is where Inttegro publishes work that remains useful without Inttegro prod
 | Skill | Purpose |
 | --- | --- |
 | [`git-change-control`](skills/git-change-control) | Isolate task-owned changes and perform auditable Git history operations without disturbing a shared dirty checkout. |
+| [`batch-commit`](skills/batch-commit) | Group a mixed working tree into explicit logical batches and prepare each staged diff for human-controlled commits. |
 
 ### Reliability and evaluation
 
@@ -39,6 +46,7 @@ Labor is where Inttegro publishes work that remains useful without Inttegro prod
 | --- | --- |
 | [`production-verification`](skills/production-verification) | Separate source, tests, commits, deployments, configuration, and live behavior into explicit evidence levels. |
 | [`message-delivery-integrity`](skills/message-delivery-integrity) | Preserve the boundary between message authoring, rendering, sending, provider acceptance, and confirmed delivery. |
+| [`security-audit`](skills/security-audit) | Run source-first defensive reviews with deterministic coverage, bounded local evidence, independent verification, and validated reports. |
 
 Install the collection:
 
