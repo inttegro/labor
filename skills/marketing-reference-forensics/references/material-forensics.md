@@ -18,7 +18,7 @@ Map these roles separately: page canvas; chapter field; media stage; product win
 
 An extractor must include square, transparent, borderless containers and images; filtering only decorated surfaces systematically misses deliberate absence. Include generated `::before`/`::after`, ancestor surfaces and inset shadows. Separate duplicate text layers used for blending from the perceived text colour. Record authored CSS and computed state separately if a fractional value could result from scaling or a CSS unit.
 
-For local uncompressed TTF/OTF resources, run `node scripts/inspect-sfnt.mjs /absolute/font.ttf` from this skill's directory. The read-only helper reports OS/2 weight and actual variation axes without installing a font library. It deliberately rejects WOFF/WOFF2/collections rather than guessing. This verifies font metadata, not licensing or which font the browser actually rendered.
+For local uncompressed TTF/OTF resources, run `node scripts/inspect-sfnt.ts /absolute/font.ttf` from this skill's directory with Node.js 22.18 or newer. The read-only TypeScript helper reports OS/2 weight and actual variation axes without installing a font library or transpiling the source. It deliberately rejects WOFF/WOFF2/collections rather than guessing. This verifies font metadata, not licensing or which font the browser actually rendered.
 
 ## Reconstruct a paint stack
 

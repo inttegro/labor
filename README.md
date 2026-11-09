@@ -90,10 +90,13 @@ Directories appear when they contain a maintained artifact; Labor does not keep 
 
 ## Development
 
-Validate the catalog and every skill:
+Labor's executable utilities are written in TypeScript and use only syntax Node can erase at runtime. Node 22.18 or newer can run the files directly; the TypeScript compiler provides a separate static check.
+
+Install development dependencies and check the catalog, TypeScript, validator tests, and every skill:
 
 ```bash
-node scripts/validate-skills.mjs
+npm ci
+npm run check
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change. Security issues should be reported privately as described in [SECURITY.md](SECURITY.md).

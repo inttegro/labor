@@ -1,3 +1,5 @@
 *.json whitespace=-indent-with-non-tab
+*.cts whitespace=-indent-with-non-tab
+*.ts whitespace=-indent-with-non-tab
 *.yaml whitespace=-indent-with-non-tab
 *.yml whitespace=-indent-with-non-tab

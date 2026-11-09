@@ -10,9 +10,9 @@ const {
   collect,
   collectSchemaErrors,
   validateDocument,
-} = require("./validate-findings.cjs");
+} = require("./validate-findings.cts");
 
-const validatorPath = path.join(__dirname, "validate-findings.cjs");
+const validatorPath = path.join(__dirname, "validate-findings.cts");
 const CLI_TIMEOUT_MS = 5000;
 const HOSTILE_CLI_TIMEOUT_MS = 15000;
 const HAS_SAFE_INPUT_OPEN = Number.isInteger(fs.constants.O_NOFOLLOW) &&
@@ -37,7 +37,7 @@ function evidence(file = "src/handler.c", line = 10) {
   return { file, line, description: "The source performs the operation without the required check." };
 }
 
-function confirmed() {
+function confirmed(): any {
   return {
     verdict: "confirmed",
     fingerprint: "src-handler-missing-check",
@@ -64,7 +64,7 @@ function confirmed() {
   };
 }
 
-function needsValidation() {
+function needsValidation(): any {
   return {
     verdict: "needs_validation",
     fingerprint: "src-parser-size-hypothesis",
@@ -81,7 +81,7 @@ function needsValidation() {
   };
 }
 
-function rejected() {
+function rejected(): any {
   return {
     verdict: "rejected",
     fingerprint: "src-router-auth-bypass",
@@ -98,7 +98,7 @@ function errorsFor(value) {
   return validateDocument(value, schema);
 }
 
-function runCli(contents, options = {}) {
+function runCli(contents, options: { nodeArgs?: string[]; timeout?: number } = {}) {
   const { nodeArgs = [], timeout = CLI_TIMEOUT_MS } = options;
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), "validate-findings-"));
   const findingsPath = path.join(directory, "findings.json");
@@ -572,8 +572,8 @@ test("caps amplified in-limit findings output under a constrained Node heap", { 
 });
 
 test("keeps shared helpers aligned with the coverage-ledger validator", () => {
-  const findingsModule = require("./validate-findings.cjs");
-  const ledgerModule = require("./validate-coverage-ledger.cjs");
+  const findingsModule = require("./validate-findings.cts");
+  const ledgerModule = require("./validate-coverage-ledger.cts");
 
   for (const name of [
     "VISIBLE_CONTENT",

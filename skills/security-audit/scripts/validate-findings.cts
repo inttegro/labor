@@ -2,7 +2,7 @@
 
 /**
  * Validates findings.json against report-schema.json.
- * Usage: node validate-findings.cjs <path-to-findings.json>
+ * Usage: node validate-findings.cts <path-to-findings.json>
  *
  * This is a dependency-free interpreter for the JSON Schema keywords used by
  * report-schema.json, plus finding-specific checks that are clearer in code.
@@ -702,7 +702,7 @@ function enforceJsonTextLimits(contents) {
 
 function run(file) {
   if (!file) {
-    console.error("Usage: node validate-findings.cjs <path-to-findings.json>");
+    console.error("Usage: node validate-findings.cts <path-to-findings.json>");
     return 1;
   }
 

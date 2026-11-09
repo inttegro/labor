@@ -2,7 +2,7 @@
 
 /**
  * Validates coverage-ledger.json and its canonical coverage IDs.
- * Usage: node validate-coverage-ledger.cjs <path-to-coverage-ledger.json>
+ * Usage: node validate-coverage-ledger.cts <path-to-coverage-ledger.json>
  */
 
 const fs = require("node:fs");
@@ -397,7 +397,12 @@ function isOwnedArtifactPath(value, agentId) {
   return value.startsWith(prefix) && value.length > prefix.length;
 }
 
-function validateStringArray(value, location, errors, options = {}) {
+function validateStringArray(
+  value,
+  location,
+  errors,
+  options: { allowEmpty?: boolean; fingerprint?: boolean; pathValue?: boolean } = {},
+) {
   const { allowEmpty = true, fingerprint = false, pathValue = false } = options;
   if (!Array.isArray(value)) {
     errors.push(`${location}: expected array`);
@@ -807,7 +812,7 @@ function validateDocument(ledger) {
 
 function run(file) {
   if (!file) {
-    console.error("Usage: node validate-coverage-ledger.cjs <path-to-coverage-ledger.json>");
+    console.error("Usage: node validate-coverage-ledger.cts <path-to-coverage-ledger.json>");
     return 1;
   }
 

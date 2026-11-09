@@ -116,7 +116,7 @@
     },
     "security-audit": {
       "origin": "third-party",
-      "relationship": "Adapted copy retaining Cloudflare's core workflow and substantial guidance.",
+      "relationship": "Adapted copy retaining Cloudflare's core workflow and substantial guidance; Labor reorganized the package and ported its JavaScript validators and tests to directly executable TypeScript.",
       "source_name": "Cloudflare: security-audit-skill",
       "source_url": "https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit",
       "source_revision": "not_recorded",

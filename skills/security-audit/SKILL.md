@@ -167,12 +167,14 @@ For each confirmed finding, identify the invariant the code must enforce and the
 
 ## Full audit workflow
 
+The validator sources are TypeScript and run directly on Node.js 22.18 or newer; they require no package installation or transpilation. Type-checking in the Labor repository is an additional development-time check, not a runtime dependency of an installed skill.
+
 In full audit mode, follow all six phases in order:
 
 1. **Reconnaissance** — map the source, trust boundaries, local build paths, companion selections, prior evidence, and initial deterministic coverage ledger with [the reconnaissance guide](references/RECONNAISSANCE.md).
 2. **Coverage-led hunting waves** — assign isolated hunters from the ledger and collect structured candidate results with [the hunting guide](references/HUNTING.md), [the attack-class catalog](references/ATTACK-CLASSES.md), and the selected domain companions.
 3. **Candidate validation** — consolidate fingerprints and give every candidate to a fresh source verifier as defined in [the validation and reporting guide](references/VALIDATION-AND-REPORTING.md).
-4. **Structured output** — write all final `confirmed`, `needs_validation`, and `rejected` records to `findings.json`; validate it with `scripts/report-schema.json` and `scripts/validate-findings.cjs`, and validate the coverage claim with `scripts/validate-coverage-ledger.cjs`.
+4. **Structured output** — write all final `confirmed`, `needs_validation`, and `rejected` records to `findings.json`; validate it with `scripts/report-schema.json` and `scripts/validate-findings.cts`, and validate the coverage claim with `scripts/validate-coverage-ledger.cts`.
 5. **Independent record verification** — use fresh agents to verify final source claims and reconcile corrections or state changes.
 6. **Target-neutral report** — derive `REPORT.md`, `FINDINGS-DETAIL.md`, and `NEEDS-VALIDATION.md` from the final records, with no live-probe instructions.
 
@@ -193,6 +195,6 @@ Do not end the run before one of exactly two terminal states: (a) all Phase 6 ar
 
 ## Origin and license
 
-This skill is adapted from Cloudflare's [`security-audit-skill`](https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit). Labor reorganized the upstream companion documents under `references/` and validation assets under `scripts/`, and added local packaging metadata; the core workflow and substantial guidance originate with Cloudflare.
+This skill is adapted from Cloudflare's [`security-audit-skill`](https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit). Labor reorganized the upstream companion documents under `references/`, moved validation assets under `scripts/`, ported the JavaScript validators and tests to directly executable TypeScript, and added local packaging metadata; the core workflow and substantial guidance originate with Cloudflare.
 
 The upstream work is MIT-licensed, Copyright (c) 2025-2026 Cloudflare, Inc. The required notice is preserved in [LICENSE](LICENSE). Labor is not affiliated with or endorsed by Cloudflare.

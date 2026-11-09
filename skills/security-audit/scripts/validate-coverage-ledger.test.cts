@@ -12,9 +12,9 @@ const {
   isSafeRelativePath,
   preflightJsonText,
   validateDocument,
-} = require("./validate-coverage-ledger.cjs");
+} = require("./validate-coverage-ledger.cts");
 
-const validatorPath = path.join(__dirname, "validate-coverage-ledger.cjs");
+const validatorPath = path.join(__dirname, "validate-coverage-ledger.cts");
 const CLI_TIMEOUT_MS = 5000;
 const HOSTILE_CLI_TIMEOUT_MS = 15000;
 const HAS_SAFE_INPUT_OPEN = Number.isInteger(fs.constants.O_NOFOLLOW) &&
@@ -22,7 +22,7 @@ const HAS_SAFE_INPUT_OPEN = Number.isInteger(fs.constants.O_NOFOLLOW) &&
   Number.isInteger(fs.constants.O_NONBLOCK) &&
   fs.constants.O_NONBLOCK !== 0;
 
-function unit(overrides = {}) {
+function unit(overrides: Record<string, any> = {}) {
   const canonicalRefs = overrides.canonical_refs || {
     surface: "src/router.ts#POST /users/:id",
     boundary: "src/authz.ts#requireOwner",
@@ -57,7 +57,7 @@ function errorsFor(value) {
   return validateDocument(value);
 }
 
-function runCli(contents, options = {}) {
+function runCli(contents, options: { nodeArgs?: string[]; timeout?: number } = {}) {
   const { nodeArgs = [], timeout = CLI_TIMEOUT_MS } = options;
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), "validate-coverage-ledger-"));
   const ledgerPath = path.join(directory, "coverage-ledger.json");
@@ -666,7 +666,7 @@ test("rejects a symlink through the CLI", { skip: process.platform === "win32" |
 });
 
 test("rejects deeply nested input without recursion failure", () => {
-  let nested = 0;
+  let nested: unknown = 0;
   for (let depth = 0; depth < 20000; depth++) nested = [nested];
   assert(errorsFor(nested).some((error) => error.includes("exceeds nesting depth limit 64")));
   if (!HAS_SAFE_INPUT_OPEN) return;

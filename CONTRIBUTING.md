@@ -37,7 +37,8 @@ Add the skill to the appropriate group in `skills.sh.json`, the catalog in `READ
 4. Run:
 
    ```bash
-   node scripts/validate-skills.mjs
+   npm ci
+   npm run check
    ```
 
 5. Open a pull request explaining the behavior, public-boundary decision, security impact, and verification performed.

@@ -1,26 +1,43 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { join, relative } from "node:path";
 
-const root = new URL("../", import.meta.url).pathname;
+interface SkillsManifest {
+  groupings?: Array<{ skills?: string[] }>;
+}
+
+interface ProvenanceRecord {
+  origin?: string;
+  relationship?: string;
+  source_url?: string | null;
+  license?: string;
+  license_file?: string;
+}
+
+interface ProvenanceManifest {
+  skills?: Record<string, ProvenanceRecord>;
+}
+
+const root = fileURLToPath(new URL("../", import.meta.url));
 const skillsRoot = join(root, "skills");
 const manifestPath = join(root, "skills.sh.json");
 const provenancePath = join(root, "skill-provenance.json");
-const errors = [];
+const errors: string[] = [];
 
-function fail(path, message) {
+function fail(path: string, message: string): void {
   errors.push(`${relative(root, path)}: ${message}`);
 }
 
-function parseFrontmatter(path, source) {
+function parseFrontmatter(path: string, source: string): Record<string, string> {
   const match = source.match(/^---\n([\s\S]*?)\n---\n/);
   if (!match) {
     fail(path, "missing YAML frontmatter");
     return {};
   }
 
-  const values = {};
+  const values: Record<string, string> = {};
   for (const line of match[1].split("\n")) {
     const field = line.match(/^([a-z_]+):\s*(.+)$/);
     if (field) values[field[1]] = field[2].replace(/^['"]|['"]$/g, "");
@@ -28,7 +45,7 @@ function parseFrontmatter(path, source) {
   return values;
 }
 
-function validateMarkdownLinks(path, source) {
+function validateMarkdownLinks(path: string, source: string): void {
   for (const match of source.matchAll(/\]\((references\/[^)#]+|scripts\/[^)#]+)\)/g)) {
     const target = join(path, "..", match[1]);
     if (!existsSync(target)) fail(path, `linked resource does not exist: ${match[1]}`);
@@ -70,7 +87,7 @@ for (const name of skillNames) {
 if (!existsSync(manifestPath)) {
   errors.push("skills.sh.json: file is missing");
 } else {
-  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8")) as SkillsManifest;
   const grouped = (manifest.groupings ?? []).flatMap((group) => group.skills ?? []);
   const duplicates = grouped.filter((name, index) => grouped.indexOf(name) !== index);
   const missing = skillNames.filter((name) => !grouped.includes(name));
@@ -83,7 +100,7 @@ if (!existsSync(manifestPath)) {
 if (!existsSync(provenancePath)) {
   errors.push("skill-provenance.json: file is missing");
 } else {
-  const provenance = JSON.parse(readFileSync(provenancePath, "utf8"));
+  const provenance = JSON.parse(readFileSync(provenancePath, "utf8")) as ProvenanceManifest;
   const records = provenance.skills ?? {};
   const recorded = Object.keys(records).sort();
   const missing = skillNames.filter((name) => !recorded.includes(name));
@@ -100,19 +117,19 @@ if (!existsSync(provenancePath)) {
 
     if (record.origin === "third-party") {
       if (!record.source_url?.startsWith("https://github.com/")) {
-		fail(provenancePath, `${name} must link its upstream GitHub source`);
+        fail(provenancePath, `${name} must link its upstream GitHub source`);
       }
       if (!record.license) fail(provenancePath, `${name} is missing its upstream license`);
       if (!record.license_file) {
-		fail(provenancePath, `${name} is missing license_file`);
+        fail(provenancePath, `${name} is missing license_file`);
       } else if (!existsSync(join(root, record.license_file))) {
-		fail(provenancePath, `${name} license file does not exist: ${record.license_file}`);
+        fail(provenancePath, `${name} license file does not exist: ${record.license_file}`);
       }
 
       const skillPath = join(skillsRoot, name, "SKILL.md");
       const source = readFileSync(skillPath, "utf8");
-      if (!source.includes(record.source_url)) {
-		fail(skillPath, "must link the upstream source recorded in skill-provenance.json");
+      if (!record.source_url || !source.includes(record.source_url)) {
+        fail(skillPath, "must link the upstream source recorded in skill-provenance.json");
       }
     }
   }

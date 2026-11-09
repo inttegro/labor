@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "nodenext",
+    "noEmit": true,
+    "rewriteRelativeImportExtensions": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["node"],
+    "verbatimModuleSyntax": true
+  },
+  "include": [
+    "scripts/**/*.ts",
+    "skills/**/*.ts"
+  ]
+}

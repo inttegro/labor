@@ -78,7 +78,7 @@ Before publication, confirm that:
 - every linked reference or script exists;
 - examples contain no private or identifying data;
 - deterministic scripts have been executed successfully;
-- the skill passes `node scripts/validate-skills.mjs`;
+- the catalog passes `npm run check`, including TypeScript, skill validation, and validator tests;
 - a reviewer can explain what the artifact does, does not do, and why it is public.
 
 ## Provenance and third-party material
