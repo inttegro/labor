@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Reference Forensics"
+  short_description: "Inspect public marketing references rigorously"
+  default_prompt: "Use $marketing-reference-forensics to study these public marketing references and produce an evidence-backed implementation dossier."

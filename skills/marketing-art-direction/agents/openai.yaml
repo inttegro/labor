@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Art Direction"
+  short_description: "Specify implementable visual direction"
+  default_prompt: "Use $marketing-art-direction to define an evidence-backed visual direction contract for this marketing experience."

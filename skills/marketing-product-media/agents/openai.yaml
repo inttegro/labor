@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Product Media"
+  short_description: "Direct truthful product media and demos"
+  default_prompt: "Use $marketing-product-media to choose and specify truthful product media for this marketing experience."

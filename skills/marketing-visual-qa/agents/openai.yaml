@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Visual QA"
+  short_description: "Evaluate marketing visuals against intent"
+  default_prompt: "Use $marketing-visual-qa to evaluate this marketing experience against its approved direction and reference evidence."
