@@ -22,5 +22,5 @@ jobs:
         run: npm ci
       - name: Validate JSON
         run: find . -name '*.json' -not -path './.git/*' -print0 | xargs -0 -n1 jq empty
-      - name: Check TypeScript and skills
+      - name: Check TypeScript, skills, and evaluations
         run: npm run check

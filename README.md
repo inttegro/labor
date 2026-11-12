@@ -60,6 +60,20 @@ Install one skill:
 npx skills add inttegro/labor --skill systems-builder-writing
 ```
 
+## Evaluations
+
+The versioned [routing corpus](evals/routing.json) covers every published skill
+with positive, negative, and ambiguous prompts plus exact overlap cases. Static
+validation runs without a model or provider credential:
+
+```bash
+npm run validate:routing
+```
+
+Labor also includes a provider-neutral runner for host-executed evaluations.
+See [the evaluation protocol](evals/README.md) for adapter, scoring, provenance,
+and result-safety requirements.
+
 ## Curation principles
 
 - **Transfer the method, not the identity.** Named company or personal styles become neutral reasoning personas. Labor does not publish impersonation prompts or phrase banks.
@@ -80,7 +94,7 @@ Third-party-derived skill directories also carry the upstream copyright and lice
 ## Repository structure
 
 - `skills/` — independently installable agent skills.
-- `evals/` — reproducible evaluations and fixtures as they are published.
+- `evals/` — reproducible evaluation contracts and public fixtures.
 - `tools/` — standalone utilities with their own documentation and tests.
 - `examples/` — small, runnable examples using public interfaces.
 - `docs/` — curation, contribution, and design notes.

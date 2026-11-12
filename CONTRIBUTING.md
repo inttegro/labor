@@ -29,6 +29,23 @@ Each skill lives at `skills/<skill-name>/SKILL.md` and must:
 
 Add the skill to the appropriate group in `skills.sh.json`, the catalog in `README.md`, and the human-readable ledger in `PROVENANCE.md`.
 
+## Evaluation contributions
+
+Routing evaluations live in `evals/routing.json`. Every published skill must
+have at least one positive, negative, and ambiguous prompt. Add an exact overlap
+case when a realistic request should use multiple skills together.
+
+Evaluation prompts must be public or synthetic, exercise a meaningful behavior
+or boundary, and avoid credentials, customer information, production exports,
+private source, and hidden reasoning. Keep provider-specific adapters and
+host-executed result artifacts out of the repository unless their publication
+purpose and contents have been explicitly reviewed.
+
+Run `npm run validate:routing` after editing the corpus. Static validation
+establishes that the contract is complete and internally consistent; it is not
+evidence that a model or host passed the suite. See [the evaluation
+protocol](evals/README.md) for execution and scoring.
+
 ## Development workflow
 
 1. Fork or clone the repository.

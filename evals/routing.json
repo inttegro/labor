@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "animation-vocabulary",
+      "should_trigger": [
+        "What is the animation called when a menu briefly scales past its final size and settles back?"
+      ],
+      "should_not_trigger": [
+        "Audit every animation in this application and write an implementation plan for the highest-impact fixes."
+      ],
+      "ambiguous": [
+        "Help me describe the motion used when this panel opens."
+      ]
+    },
+    {
+      "name": "apple-charts",
+      "should_trigger": [
+        "Design an accessible Swift Charts spending trend with selectable points and a useful VoiceOver summary."
+      ],
+      "should_not_trigger": [
+        "Choose the right navigation and toolbar controls for this macOS document window."
+      ],
+      "ambiguous": [
+        "How should this iPhone analytics view present monthly revenue?"
+      ]
+    },
+    {
+      "name": "apple-hig-components",
+      "should_trigger": [
+        "Choose the appropriate iPad navigation, toolbar, menu, and search components for this document browser."
+      ],
+      "should_not_trigger": [
+        "Design the keyboard, pointer, and focus behavior for this iPad editor."
+      ],
+      "ambiguous": [
+        "Review the controls and navigation in this Apple-platform settings screen."
+      ]
+    },
+    {
+      "name": "apple-hig-foundations",
+      "should_trigger": [
+        "Define the typography, color, Dark Mode, SF Symbols, layout, and accessibility foundations for this iOS app."
+      ],
+      "should_not_trigger": [
+        "Implement Apple Pay and Wallet passes for this iPhone checkout flow."
+      ],
+      "ambiguous": [
+        "Make this Apple-platform interface feel more native and accessible."
+      ]
+    },
+    {
+      "name": "apple-hig-getting-started",
+      "should_trigger": [
+        "We are starting an app for iPhone and Apple Watch; help us choose the platform strategy before designing screens."
+      ],
+      "should_not_trigger": [
+        "Review the detents, scrim, dismissal, and keyboard behavior of this existing SwiftUI sheet."
+      ],
+      "ambiguous": [
+        "Help us adapt this product concept into an Apple app."
+      ]
+    },
+    {
+      "name": "apple-hig-inputs",
+      "should_trigger": [
+        "Design keyboard shortcuts, pointer interactions, focus movement, and Apple Pencil alternatives for this iPad editor."
+      ],
+      "should_not_trigger": [
+        "Choose between a tab bar and sidebar for this iPad application's navigation."
+      ],
+      "ambiguous": [
+        "Review how people interact with this Apple-platform control using more than touch."
+      ]
+    },
+    {
+      "name": "apple-hig-patterns",
+      "should_trigger": [
+        "Design a familiar iOS onboarding, account setup, loading, error recovery, and settings flow."
+      ],
+      "should_not_trigger": [
+        "Select typography, semantic colors, and SF Symbols for this existing iOS screen."
+      ],
+      "ambiguous": [
+        "What is the native Apple-platform way to structure this user workflow?"
+      ]
+    },
+    {
+      "name": "apple-hig-technologies",
+      "should_trigger": [
+        "Design the permissions, lifecycle, privacy messaging, and system UI for a HealthKit integration."
+      ],
+      "should_not_trigger": [
+        "Specify touch, keyboard, pointer, and focus behavior for this custom control."
+      ],
+      "ambiguous": [
+        "How should this app integrate an Apple platform service without fighting the system experience?"
+      ]
+    },
+    {
+      "name": "apple-sheets",
+      "should_trigger": [
+        "Review this SwiftUI bottom sheet's detents, scrim, drag dismissal, keyboard handling, and accessibility."
+      ],
+      "should_not_trigger": [
+        "Plan a platform-neutral drag interaction with momentum and interruptible spring motion."
+      ],
+      "ambiguous": [
+        "How should this modal surface behave on iPhone and iPad?"
+      ]
+    },
+    {
+      "name": "batch-commit",
+      "should_trigger": [
+        "Group these many unrelated changed files into logical staged batches and give me a commit message for each batch."
+      ],
+      "should_not_trigger": [
+        "Amend the last signed commit while preserving unrelated changes in this dirty checkout."
+      ],
+      "ambiguous": [
+        "Help me turn this mixed working tree into sensible commits."
+      ]
+    },
+    {
+      "name": "fluid-interface-design",
+      "should_trigger": [
+        "Design an interruptible drag-to-dismiss interaction with velocity handoff, soft boundaries, and reduced-motion behavior."
+      ],
+      "should_not_trigger": [
+        "Tell me the standard name for the bounce when a popover appears."
+      ],
+      "ambiguous": [
+        "Make this web interaction feel more physical and responsive."
+      ]
+    },
+    {
+      "name": "git-change-control",
+      "should_trigger": [
+        "Make a signed commit in this dirty shared checkout without staging or rewriting anyone else's work."
+      ],
+      "should_not_trigger": [
+        "Read the repository and explain why this function returns the wrong value; do not change anything."
+      ],
+      "ambiguous": [
+        "Help me safely finish these Git changes without losing unrelated work."
+      ]
+    },
+    {
+      "name": "improve-animations",
+      "should_trigger": [
+        "Audit the motion code across this application and produce prioritized, self-contained implementation plans without editing source."
+      ],
+      "should_not_trigger": [
+        "Implement a new swipeable card interaction with velocity-aware springs."
+      ],
+      "ambiguous": [
+        "Make the animations in this app feel more polished."
+      ]
+    },
+    {
+      "name": "marketing-art-direction",
+      "should_trigger": [
+        "Turn this approved positioning into a marketing-site direction covering composition, typography, surfaces, narrative, and responsive rules."
+      ],
+      "should_not_trigger": [
+        "Inspect three public marketing sites and document their measured layouts, media, typography, and reusable implementation patterns."
+      ],
+      "ambiguous": [
+        "Give this product website a coherent visual direction."
+      ]
+    },
+    {
+      "name": "marketing-product-media",
+      "should_trigger": [
+        "Direct the product demo scenes, responsive crops, state continuity, motion fallback, and truthful screenshots for this launch page."
+      ],
+      "should_not_trigger": [
+        "Define the overall typography, page composition, surface language, and narrative hierarchy for the marketing site."
+      ],
+      "ambiguous": [
+        "Plan the visuals that demonstrate this software product on the website."
+      ]
+    },
+    {
+      "name": "marketing-reference-forensics",
+      "should_trigger": [
+        "Study these public marketing sites visually and technically, then produce an illustrated evidence dossier without cloning them."
+      ],
+      "should_not_trigger": [
+        "Evaluate our implemented homepage against its already approved art direction and acceptance captures."
+      ],
+      "ambiguous": [
+        "Help me understand what makes this public product website work visually."
+      ]
+    },
+    {
+      "name": "marketing-visual-qa",
+      "should_trigger": [
+        "Review the rendered marketing site against its approved art direction, responsive captures, product-media truth, and conversion path."
+      ],
+      "should_not_trigger": [
+        "Create a new visual direction for a marketing site that has no approved direction yet."
+      ],
+      "ambiguous": [
+        "Tell me whether this marketing implementation matches the intended design."
+      ]
+    },
+    {
+      "name": "message-delivery-integrity",
+      "should_trigger": [
+        "Trace this order email from template variables and preview through queueing, provider acceptance, and confirmed delivery."
+      ],
+      "should_not_trigger": [
+        "Rewrite this ordinary internal announcement so its argument is clearer and more concrete."
+      ],
+      "ambiguous": [
+        "Help me verify that this customer notification says the right thing and was actually delivered."
+      ]
+    },
+    {
+      "name": "product-marketing-personas",
+      "should_trigger": [
+        "Draft an enterprise product page using the buyer perspective best suited to infrastructure leaders, without imitating another company."
+      ],
+      "should_not_trigger": [
+        "Revise this technical essay so it tests its premises and explains the mechanism clearly."
+      ],
+      "ambiguous": [
+        "Help me write product copy that speaks to how the buyer actually works."
+      ]
+    },
+    {
+      "name": "production-verification",
+      "should_trigger": [
+        "Determine whether this fix is actually deployed and working in production by separating source, revision, configuration, provider state, and observed behavior."
+      ],
+      "should_not_trigger": [
+        "Review this library source for security vulnerabilities using only local code and bounded fixtures."
+      ],
+      "ambiguous": [
+        "The team says the incident is fixed; help me establish what is actually true."
+      ]
+    },
+    {
+      "name": "security-audit",
+      "should_trigger": [
+        "Perform a comprehensive security audit of this API codebase and produce validated findings with source evidence."
+      ],
+      "should_not_trigger": [
+        "Check whether yesterday's non-security deployment is live and behaving correctly in production."
+      ],
+      "ambiguous": [
+        "Investigate whether this service has an exploitable trust-boundary flaw."
+      ]
+    },
+    {
+      "name": "systems-builder-writing",
+      "should_trigger": [
+        "Revise this technical essay so it reasons from first principles, tests the premise, explains the mechanism, and marks uncertainty honestly."
+      ],
+      "should_not_trigger": [
+        "Write landing-page copy for a new payments product using an appropriate buyer-centered marketing persona."
+      ],
+      "ambiguous": [
+        "Help me write a clear argument that sounds like a practical builder rather than a slogan."
+      ]
+    }
+  ],
+  "overlap_cases": [
+    {
+      "prompt": "Study these public marketing references, extract transferable evidence, and turn it into an original visual direction for our site.",
+      "expected": [
+        "marketing-art-direction",
+        "marketing-reference-forensics"
+      ],
+      "reason": "The request requires both reference research and a new direction contract."
+    },
+    {
+      "prompt": "Define the launch site's visual direction and specify the truthful product-demo scenes that carry that direction across desktop and mobile.",
+      "expected": [
+        "marketing-art-direction",
+        "marketing-product-media"
+      ],
+      "reason": "The request combines the site-wide visual system with media-specific direction."
+    },
+    {
+      "prompt": "Evaluate the implemented homepage against its approved art direction and the reference captures that informed it.",
+      "expected": [
+        "marketing-reference-forensics",
+        "marketing-visual-qa"
+      ],
+      "reason": "The acceptance review depends on both reference evidence and rendered visual QA."
+    },
+    {
+      "prompt": "Group this dirty working tree into logical batches, then create signed commits without touching unrelated changes.",
+      "expected": [
+        "batch-commit",
+        "git-change-control"
+      ],
+      "reason": "Batch design and safe Git execution are separate responsibilities."
+    },
+    {
+      "prompt": "Choose the Apple platform strategy for this app, then define its typography, color, accessibility, and layout foundations.",
+      "expected": [
+        "apple-hig-foundations",
+        "apple-hig-getting-started"
+      ],
+      "reason": "The request starts with platform fit and proceeds into foundational interface decisions."
+    },
+    {
+      "prompt": "Design an iPad onboarding flow with the right navigation controls, keyboard focus order, pointer behavior, and Pencil alternatives.",
+      "expected": [
+        "apple-hig-components",
+        "apple-hig-inputs",
+        "apple-hig-patterns"
+      ],
+      "reason": "The request spans a workflow pattern, component selection, and multiple input systems."
+    },
+    {
+      "prompt": "Design the Apple Pay checkout flow, including system integration, modal presentation, and the fallback interaction when authorization is cancelled.",
+      "expected": [
+        "apple-hig-patterns",
+        "apple-hig-technologies",
+        "apple-sheets"
+      ],
+      "reason": "The flow combines an Apple technology, a user workflow, and modal presentation behavior."
+    },
+    {
+      "prompt": "Name the motion effect in this clip, then audit how the codebase uses it and write a prioritized improvement plan without editing source.",
+      "expected": [
+        "animation-vocabulary",
+        "improve-animations"
+      ],
+      "reason": "The request requires both terminology lookup and a read-only motion audit."
+    },
+    {
+      "prompt": "Draft the enterprise launch page with an infrastructure-buyer persona and make the argument concrete, first-principles, and explicit about uncertainty.",
+      "expected": [
+        "product-marketing-personas",
+        "systems-builder-writing"
+      ],
+      "reason": "The request combines buyer-centered product marketing with a systems-minded writing method."
+    },
+    {
+      "prompt": "Investigate whether the messaging fix is deployed, whether the template rendered correctly, and whether the provider actually delivered the email.",
+      "expected": [
+        "message-delivery-integrity",
+        "production-verification"
+      ],
+      "reason": "Production evidence and message-lifecycle evidence are both required."
+    },
+    {
+      "prompt": "Audit the authentication service for vulnerabilities, then establish whether the reviewed patch revision is deployed and effective in production.",
+      "expected": [
+        "production-verification",
+        "security-audit"
+      ],
+      "reason": "The request combines source-first security review with production verification."
+    },
+    {
+      "prompt": "Design an interactive Swift Charts dashboard whose selection gesture, keyboard focus, pointer behavior, and VoiceOver navigation all work across iPad and Mac.",
+      "expected": [
+        "apple-charts",
+        "apple-hig-inputs"
+      ],
+      "reason": "The chart design and its cross-input interaction model both require specialist guidance."
+    }
+  ]
+}

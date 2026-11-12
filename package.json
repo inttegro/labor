@@ -7,10 +7,12 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "check": "npm run typecheck && npm run validate && npm test",
-    "test": "node --test skills/security-audit/scripts/*.test.cts",
+    "check": "npm run typecheck && npm run validate && npm run validate:routing && npm test",
+    "eval:routing": "node scripts/run-routing-eval.ts",
+    "test": "node --test scripts/*.test.ts skills/security-audit/scripts/*.test.cts",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.security.json --noEmit",
-    "validate": "node scripts/validate-skills.ts"
+    "validate": "node scripts/validate-skills.ts",
+    "validate:routing": "node scripts/validate-routing.ts"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

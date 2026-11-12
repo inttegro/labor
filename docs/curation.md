@@ -77,6 +77,9 @@ Before publication, confirm that:
 - the entrypoint is concise and supporting detail is progressively disclosed;
 - every linked reference or script exists;
 - examples contain no private or identifying data;
+- evaluation prompts and fixtures are public or synthetic, versioned, and tied
+  to an observable behavior or boundary;
+- deterministic evaluation validation passes without provider credentials;
 - deterministic scripts have been executed successfully;
 - the catalog passes `npm run check`, including TypeScript, skill validation, and validator tests;
 - a reviewer can explain what the artifact does, does not do, and why it is public.
