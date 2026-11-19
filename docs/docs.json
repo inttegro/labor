@@ -1,0 +1,85 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "Labor",
+  "description": "Open skills and evaluations for reliable AI systems.",
+  "logo": {
+    "light": "/logo-dark.svg",
+    "dark": "/logo-light.svg",
+    "href": "/labor"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#A16207",
+    "light": "#F59E0B",
+    "dark": "#A16207"
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://os.inttegro.dev"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/labor"
+    }
+  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Start here",
+        "pages": ["labor/why-labor", "labor/install"]
+      },
+      {
+        "group": "Skills",
+        "pages": ["labor/skills/index", "labor/skills/using-skills"]
+      },
+      {
+        "group": "Evaluations",
+        "pages": [
+          "labor/evaluations/overview",
+          "labor/evaluations/static-validation",
+          "labor/evaluations/run-routing",
+          "labor/evaluations/adapter-protocol"
+        ]
+      },
+      {
+        "group": "Project",
+        "pages": ["labor/curation", "labor/provenance", "labor/contribution-guide"]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://inttegro.com",
+      "github": "https://github.com/inttegro/labor"
+    },
+    "links": [
+      {
+        "header": "Labor",
+        "items": [
+          {"label": "Install", "href": "/labor/install"},
+          {"label": "Skill catalog", "href": "/labor/skills"},
+          {"label": "Evaluations", "href": "/labor/evaluations/overview"}
+        ]
+      },
+      {
+        "header": "Project",
+        "items": [
+          {"label": "Source code", "href": "https://github.com/inttegro/labor"},
+          {"label": "Contribute", "href": "/labor/contribution-guide"},
+          {"label": "Provenance", "href": "/labor/provenance"}
+        ]
+      },
+      {
+        "header": "Inttegro open source",
+        "items": [
+          {"label": "HTTPAPI", "href": "https://os.inttegro.dev/httpapi"},
+          {"label": "Simile", "href": "https://os.inttegro.dev/simile"},
+          {"label": "All repositories", "href": "https://github.com/inttegro"}
+        ]
+      }
+    ]
+  }
+}

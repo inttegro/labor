@@ -4,6 +4,8 @@ Open-source tools, skills, evals, and workflows for teams building reliable AI s
 
 Labor is where Inttegro publishes work that remains useful without Inttegro products or infrastructure. Product-specific integrations belong in [`inttegro/ai`](https://github.com/inttegro/ai); internal operations, customer data, credentials, and private company policy belong in neither repository.
 
+Read the guides at [os.inttegro.dev/labor](https://os.inttegro.dev/labor), or browse the installable catalog on [skills.sh](https://skills.sh/inttegro/labor).
+
 ## Skills
 
 ### Writing and communication
