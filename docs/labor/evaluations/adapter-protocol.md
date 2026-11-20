@@ -1,10 +1,10 @@
 ---
 title: Adapter protocol
 sidebarTitle: Adapter protocol
-description: Implement the versioned standard-input and standard-output contract used by the Labor routing runner.
+description: Connect an agent host to the Labor runner through a versioned JSON contract.
 ---
 
-An adapter connects Labor's provider-neutral runner to a particular agent host or model classifier.
+An adapter translates Labor's provider-neutral requests into calls your agent host or classifier can execute.
 
 ## Request
 
@@ -35,7 +35,7 @@ The adapter receives one JSON object on standard input:
 }
 ```
 
-An adapter may exercise the host's native router or make an isolated classification call using the supplied catalog. It must not return hidden reasoning.
+Use the host's native router or make an isolated classification call with the supplied catalog. Return the routing outcome and selected skills while keeping hidden reasoning inside the provider or host.
 
 ## Result
 
@@ -59,13 +59,13 @@ Write exactly one result object to standard output:
 }
 ```
 
-Use `selected`, `clarified`, `refused`, or `error` for `outcome`. If usage or latency is unavailable, record that state explicitly and use `null`; do not invent measurements.
+Use `selected`, `clarified`, `refused`, or `error` for `outcome`. Set unavailable usage or latency values to `null` and record their source state explicitly.
 
-## Keep result artifacts safe
+## Protect the result artifact
 
-- Keep provider keys in the adapter environment, never in arguments or results.
-- Do not store hidden reasoning, customer data, private source, credentials, or production payloads.
-- Use public or synthetic prompts.
-- Review host-executed result artifacts before committing or publishing them.
+- Keep provider keys inside the adapter environment and out of arguments and results.
+- Limit stored data to public or synthetic prompts and the protocol fields required for review.
+- Exclude hidden reasoning, customer data, private source, credentials, and production payloads.
+- Review every host-executed artifact before committing or publishing it.
 
-The normative protocol and all supported fields remain in [`evals/README.md`](https://github.com/inttegro/labor/blob/master/evals/README.md).
+See [`evals/README.md`](https://github.com/inttegro/labor/blob/master/evals/README.md) for the normative protocol and complete field reference.

@@ -1,27 +1,28 @@
 ---
-title: Curation policy
+title: What belongs in Labor
 sidebarTitle: Curation
-description: Decide whether an artifact belongs in Labor and preserve its public, portable boundary.
+description: See the standards every Labor skill, evaluation, tool, and example has to meet.
 ---
 
-Labor publishes reusable AI engineering work, not a mirror of Inttegro's internal configuration.
+Labor publishes agent workflows that other teams can understand, install, and validate from public materials.
 
-## Admission test
+## A good fit for the collection
 
 An artifact belongs in Labor when:
 
-1. a team can use it without Inttegro products, private repositories, credentials, or customer data;
-2. its behavior and limits can be explained from public information;
-3. it has a concrete use case, a discoverable trigger, and maintained validation;
-4. publication does not expose private operations, topology, controls, or personal information; and
-5. its expected benefit exceeds its maintenance and misuse surface.
+1. it solves a concrete problem for teams beyond its source project;
+2. its behavior and limits can be understood from public information;
+3. users can discover it through a focused name and description;
+4. its examples and fixtures are public or synthetic;
+5. its validation is practical to run and maintain; and
+6. its source, attribution, and license are recorded.
 
-## Publication bar
+## Ready to publish
 
-Before publication, confirm that names and descriptions route only relevant requests, linked files exist, examples are public or synthetic, provenance is complete, and deterministic checks pass.
+A release is ready when links resolve, routing cases match the published catalog, deterministic checks pass, and the provenance ledger covers every package.
 
-Platform names can remain when technical precision requires them. Named-company or named-person imitation does not belong in Labor.
+Platform and company names are useful when the technology itself is the subject. Writing and design guidance describes observable methods in its own words, with sources cited where they add context.
 
 <Note>
-  The complete source policy, including generalization and provenance rules, is maintained in [`docs/curation.md`](https://github.com/inttegro/labor/blob/master/docs/curation.md).
+  Read the complete [curation policy](https://github.com/inttegro/labor/blob/master/docs/curation.md) for packaging, provenance, and release requirements.
 </Note>

@@ -1,30 +1,30 @@
 ---
-title: Why Labor exists
+title: Why Labor
 sidebarTitle: Why Labor
-description: Keep useful AI engineering methods portable, inspectable, and independent of one product or company environment.
+description: Give useful agent workflows a clear package, a public record, and tests that other teams can run.
 ---
 
-Useful agent workflows often begin inside a product team. Left there, they depend on private paths, company vocabulary, and operating assumptions that nobody else can verify.
+Agent workflows become more useful when other teams can inspect, install, and test them. Labor packages proven methods so their instructions, limits, and sources travel together.
 
-Labor extracts the reusable method and publishes it with its boundaries intact.
+## Carry the method with the package
 
-## Make the method portable
+A Labor skill explains the job it handles, when it should be selected, how to perform the work, and how to check the result. Examples use public or synthetic material, so the package can stand on its own.
 
-A Labor artifact must work without Inttegro products, customer data, credentials, or undocumented infrastructure. It should tell a reader when to use it, what it changes, and how to validate the result.
+Each published skill includes the parts that make a workflow dependable:
 
-| Labor keeps | Labor removes |
-| --- | --- |
-| Decision models and non-obvious constraints | Private repository paths and internal service names |
-| Safety boundaries and failure modes | Customer examples and production exports |
-| Deterministic helpers and validation | Credentials and privileged operating instructions |
-| Public sources and honest provenance | Imitation prompts and unsupported authorship claims |
+- a focused trigger for routing;
+- decision rules and practical constraints;
+- validation steps and known failure modes; and
+- sources, attribution, and license information.
 
-## Publish maintained work
+## Test the first decision
 
-Labor is a catalog, not a dump. Every skill needs a discriminating trigger, useful constraints, validation, and a maintenance path. Every evaluation needs versioned public inputs and an observable scoring contract.
+An agent has to choose the right workflow before that workflow can help. Labor includes a versioned routing suite with direct, irrelevant, ambiguous, and multi-skill requests. You can validate the corpus locally, then run the same cases against your own host.
 
-Product-specific Inttegro integrations belong in [`inttegro/ai`](https://github.com/inttegro/ai). Internal operations remain in their owning private repositories.
+## Keep the collection trustworthy
+
+Every contribution has to be understandable from public material, safe to publish, and practical to maintain. The curation policy and provenance ledger make those standards visible to anyone using the collection.
 
 <Tip>
-  Ready to use the collection? [Install Labor](/labor/install). Planning to contribute? Start with the [curation policy](/labor/curation).
+  [Install Labor](/labor/install) to start using the collection, or read the [curation policy](/labor/curation) to see how work is selected.
 </Tip>

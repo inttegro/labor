@@ -1,35 +1,35 @@
 ---
-title: Routing evaluations
+title: Test skill routing
 sidebarTitle: Overview
-description: Test whether an agent host selects the right Labor skills for realistic requests.
+description: Measure how reliably an agent selects the right Labor skills across 78 public cases.
 ---
 
-Labor's first public evaluation suite measures skill routing. It asks a narrow question: given a request and the public catalog, did the host select the appropriate skill or skills?
+Skill selection is the first decision an agent makes before following a Labor workflow. This suite measures that decision by giving a host a request and the public catalog, then checking the selected skills against a versioned expectation.
 
-It does not measure overall model quality or the quality of the final work product.
+The score covers routing accuracy. Evaluate the quality of the completed work with a separate task-specific test.
 
 ## What the suite contains
 
 | Case type | Expected behavior |
 | --- | --- |
 | Positive | Select the target skill. |
-| Negative | Do not select the tempting but irrelevant target. |
+| Negative | Leave the target unselected when the request falls outside its scope. |
 | Ambiguous | Select the plausible target or ask for clarification. |
-| Overlap | Select the exact set of skills required by a cross-boundary request. |
+| Overlap | Select the exact set required by a request that crosses skill boundaries. |
 
-The current corpus contains one positive, negative, and ambiguous case for every published skill, plus 12 exact overlap cases.
+The current corpus gives every published skill one positive, one negative, and one ambiguous case. Twelve overlap cases test exact multi-skill selection.
 
-## Two different proofs
+## Choose the check you need
 
 <CardGroup cols={2}>
-  <Card title="Validate the contract" icon="check-double" href="/labor/evaluations/static-validation">
-    Check corpus completeness, names, descriptions, duplicates, and expected case structure without calling a model.
+  <Card title="Check the corpus" icon="check-double" href="/labor/evaluations/static-validation">
+    Verify completeness, names, descriptions, duplicate prompts, and expectation structure locally.
   </Card>
-  <Card title="Run a host evaluation" icon="play" href="/labor/evaluations/run-routing">
-    Send each case through your adapter and record a provenance-rich JSONL result artifact.
+  <Card title="Test an agent host" icon="play" href="/labor/evaluations/run-routing">
+    Send the cases through your adapter and save the results as reviewable JSONL.
   </Card>
 </CardGroup>
 
 <Warning>
-  A valid corpus proves that the evaluation contract is internally consistent. It does not prove that any model or agent host passed it.
+  Corpus validation confirms that the test data is complete and internally consistent. A host result comes from executing the suite through an adapter.
 </Warning>

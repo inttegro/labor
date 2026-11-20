@@ -1,14 +1,14 @@
 ---
-title: Use Labor skills
+title: Ask for a Labor skill
 sidebarTitle: Using skills
-description: Invoke a skill explicitly, let your host route from the description, or combine skills when the work crosses boundaries.
+description: Call a skill by name, describe the outcome in plain language, or combine distinct workflows.
 ---
 
-Each Labor skill has a focused trigger and a bounded workflow. The skill supplies method and constraints; your agent host supplies tools, context, and execution.
+Each Labor skill pairs a focused trigger with a practical workflow. Your agent host brings the tools and context needed to carry it out.
 
-## Name a skill for predictable routing
+## Call it by name
 
-Explicit invocation is useful when you already know the workflow you want:
+Use the catalog name when you already know which workflow fits:
 
 ```text
 Use git-change-control to split these changes into logical signed commits.
@@ -18,26 +18,26 @@ Use git-change-control to split these changes into logical signed commits.
 Use marketing-reference-forensics to study this public landing page.
 ```
 
-## Describe the outcome normally
+## Ask in plain language
 
-If your host supports automatic skill routing, you can ask for the work directly:
+With automatic skill routing, describe the result you want:
 
 ```text
 Audit the motion across this web app and give me a prioritized implementation plan.
 ```
 
-The `improve-animations` description is written to match that request while excluding narrow single-diff reviews.
+The `improve-animations` trigger matches a codebase-wide motion audit and keeps a single-diff review outside its scope.
 
-## Combine skills deliberately
+## Combine distinct workflows
 
-Some tasks cross a real boundary. For example:
+Some requests contain two separate jobs. Name both workflows and give each one a clear role:
 
 ```text
 Use marketing-art-direction to define the page direction, then marketing-visual-qa to assess the implementation against it.
 ```
 
-Do not add skills merely because they sound related. Each selected skill should change the work or its validation.
+Use the smallest set that covers the work. Every selected skill should change either the method or the validation.
 
-## Keep authority outside the skill
+## Your host stays in control
 
-A skill does not create credentials, permissions, or consent. Your host and user still decide what files, accounts, production systems, and external actions are in scope.
+Skills operate through the permissions and tools provided by your host. You remain in control of the files, accounts, production systems, and external actions available to the agent.

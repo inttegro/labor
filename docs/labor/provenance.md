@@ -1,12 +1,12 @@
 ---
 title: Provenance and licenses
 sidebarTitle: Provenance
-description: See where each Labor skill originated and which license applies to independently installed material.
+description: Trace each Labor skill to its source and see which license travels with the package.
 ---
 
-Every Labor skill has a machine-readable origin record in `skill-provenance.json`. Repository validation requires one record for every published skill.
+Every published skill has an origin record in `skill-provenance.json`. Repository checks keep the catalog and manifest in sync.
 
-## Third-party-derived skills
+## Adapted skills
 
 | Labor skill | Upstream | Relationship |
 | --- | --- | --- |
@@ -15,14 +15,14 @@ Every Labor skill has a machine-readable origin record in `skill-provenance.json
 | `improve-animations` | Emil Kowalski's `improve-animations` | Adapted workflow with reorganized companion files. |
 | `security-audit` | Cloudflare's `security-audit-skill` | Adapted workflow with TypeScript validators and Labor packaging. |
 
-Each derived skill keeps the upstream notice inside its own directory so independently installing it preserves the required attribution.
+Each adapted package carries its upstream notice inside the skill directory. Attribution therefore remains present when that skill is installed on its own.
 
-## Inttegro-authored skills
+## Original Labor skills
 
-The remaining 18 skills are Inttegro-authored workflows or original syntheses of cited public documentation. “Original synthesis” describes the skill package, not ownership of the underlying platform documentation, trademarks, or ideas.
+The other 18 skills are original workflows or original syntheses of cited public documentation. The synthesis label applies to the Labor package; source documentation, trademarks, and underlying ideas remain with their respective owners.
 
-## License boundary
+## How the licenses apply
 
-The root MIT License covers Inttegro-authored material and Inttegro's modifications. Third-party-derived material retains its upstream notice.
+The repository's MIT License covers original Labor material and changes made to adapted packages. Upstream notices continue to govern third-party material where applicable.
 
-Read the complete [provenance ledger](https://github.com/inttegro/labor/blob/master/PROVENANCE.md) or inspect the [machine-readable manifest](https://github.com/inttegro/labor/blob/master/skill-provenance.json).
+Open the [provenance ledger](https://github.com/inttegro/labor/blob/master/PROVENANCE.md) for the full history, or inspect the [machine-readable manifest](https://github.com/inttegro/labor/blob/master/skill-provenance.json).

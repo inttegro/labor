@@ -1,19 +1,19 @@
 ---
 title: Run the routing suite
 sidebarTitle: Run the suite
-description: Connect a host adapter, execute focused or complete routing evaluations, and record reviewable JSONL results.
+description: Connect your agent host, run focused or complete routing tests, and save reviewable JSONL results.
 ---
 
-The runner sends one protocol-versioned JSON request per case to an adapter process. The adapter exercises your host or classifier and returns the selected skills.
+Connect Labor to your agent host through a small adapter process. The runner sends one versioned JSON request per case, and the adapter returns the skills selected by your host or classifier.
 
 ## Prepare an adapter
 
-Your adapter must:
+For each request, the adapter has four responsibilities:
 
-1. read one JSON request from standard input;
-2. evaluate the supplied prompt and candidate catalog;
-3. write exactly one JSON result to standard output; and
-4. keep diagnostics on standard error.
+1. Read one JSON request from standard input.
+2. Evaluate the supplied prompt and candidate catalog.
+3. Write exactly one JSON result to standard output.
+4. Keep diagnostics on standard error.
 
 See the [adapter protocol](/labor/evaluations/adapter-protocol) for the request and result shapes.
 
@@ -32,12 +32,15 @@ npm run eval:routing -- \
   --output /tmp/labor-routing-eval.jsonl
 ```
 
-Use `--case-type`, `--skill`, or `--limit` for a focused run. Use `--repetitions` to observe variance.
+## Shape the run
 
-The default minimum score is `1`. Lower it explicitly only when collecting a baseline rather than enforcing a release gate.
+- Use `--case-type`, `--skill`, or `--limit` to focus the suite.
+- Use `--repetitions` to observe variance across repeated requests.
+- Keep the default minimum score of `1` for a release gate.
+- Set a lower minimum explicitly when you are collecting a baseline.
 
-## Review the artifact
+## Review the results
 
-The JSONL output starts with a run record, includes one result per case and repetition, and ends with a summary. It records the model, provider, host and catalog revisions, locale, region, timing, usage provenance, selected skills, and outcome.
+The JSONL file begins with the run configuration, includes one result for every case and repetition, and closes with a summary. Each run records model, provider, host and catalog revisions, locale, region, timing, usage provenance, selected skills, and outcome.
 
-Provider credentials stay inside the adapter process. Labor does not require live provider access in public CI.
+Keep provider credentials inside the adapter environment. Committed result artifacts should contain public or synthetic prompts and the recorded evaluation fields only.

@@ -1,63 +1,54 @@
 # Curation policy
 
-Labor publishes reusable AI engineering work, not a mirror of Inttegro's internal configuration.
+Labor publishes reusable agent workflows that other teams can understand, install, and validate from public materials.
 
-## Admission test
+## What Labor accepts
 
 An artifact belongs in Labor when all of the following are true:
 
-1. A team can use it without access to Inttegro products, private repositories, credentials, or customer data.
+1. It solves a concrete problem beyond the project where it originated.
 2. Its behavior and limits can be explained from public information.
-3. It has a concrete use case, a discoverable trigger, and a maintained validation path.
-4. Publishing it does not expose private operations, security controls, production topology, or personal information.
-5. Its expected benefit is larger than its maintenance and misuse surface.
+3. It has a focused use case, a discoverable trigger, and a maintained validation path.
+4. Its examples and fixtures use public or synthetic data.
+5. Its source, attribution, and redistribution terms are recorded.
+6. Its value justifies its maintenance and misuse surface.
 
-Product-specific integrations belong in [`inttegro/ai`](https://github.com/inttegro/ai). Internal-only workflows remain in their owning private repository.
+## Package the reusable method
 
-## Generalizing an internal skill
+A portable package should carry everything a new user needs to apply the method:
 
-### Preserve
-
-- the decision model;
-- non-obvious constraints and safety boundaries;
-- evidence discipline;
+- a focused trigger and decision model;
+- practical constraints and safety boundaries;
 - useful workflows, rubrics, and deterministic helpers;
+- validation that a contributor can run locally; and
 - failure modes that generalize beyond the source project.
 
-### Remove or replace
+Published packages stay free of credentials, personal information, private source, restricted endpoints, production exports, and temporary fixes presented as universal rules.
 
-- company, repository, service, and employee names that are not necessary to the subject;
-- private paths, endpoints, schemas, and operating policy;
-- customer examples and production data;
-- instructions that assume an Inttegro-only tool or permission;
-- temporary fixes presented as universal rules.
+## Write original, attributable guidance
 
-### Convert style sources into personas
+A writing or design skill can describe a transferable way of reasoning through observable behavior:
 
-A skill may encode a transferable way of reasoning, but it must not ask an agent to impersonate a real person or company.
-
-Replace a named style with:
-
-- a neutral persona name;
-- the audience and situation where the persona helps;
-- the persona's reasoning sequence;
+- the audience and situation where the method helps;
+- the reasoning sequence;
 - observable writing or decision behavior;
-- explicit failure modes and factual limits.
+- factual limits and failure modes; and
+- citations to useful public sources.
 
-Do not copy recognisable language, slogans, verbal tics, or personal biography. A persona should remain useful when the reader has never heard of its source material.
+Use original language throughout the package. Slogans, verbal tics, personal biography, and imitation prompts weaken portability and create unnecessary attribution risk.
 
-### Keep necessary platform names
+### Use platform names precisely
 
-A company or product name may remain when the technology itself is the subject, such as guidance for a named operating system, API, framework, or protocol. This is technical precision, not a style persona.
+A company or product name belongs in a skill when its technology is the subject, such as guidance for a named operating system, API, framework, or protocol.
 
 For platform-reference skills:
 
 - use primary, official sources;
-- paraphrase guidance instead of reproducing source prose;
-- distinguish platform requirements from transferable design principles;
-- include a clear independence and non-endorsement boundary;
-- record the source-review date when behavior or policy can change;
-- generalize portable methods into a separate neutral skill when they do not require that platform.
+- explain guidance in original language;
+- identify platform requirements and transferable design principles;
+- state the project's independence from the platform owner;
+- record the source-review date when behavior or policy can change; and
+- package broadly useful methods separately when they have value beyond that platform.
 
 ## Categories
 
@@ -67,32 +58,31 @@ For platform-reference skills:
 - **Reliability and evaluation** — production evidence, security, evals, incident reasoning, and delivery integrity.
 - **Agent infrastructure** — tool protocols, orchestration, packaging, and reusable agent utilities.
 
-Categories organize discovery; skill directories remain flat under `skills/` for straightforward installation.
+Categories help people browse the catalog. Skill directories remain flat under `skills/` so every package has a straightforward install path.
 
-## Publication bar
+## Release checklist
 
 Before publication, confirm that:
 
-- the name and description route only relevant requests;
+- the name and description route relevant requests;
 - the entrypoint is concise and supporting detail is progressively disclosed;
 - every linked reference or script exists;
-- examples contain no private or identifying data;
-- evaluation prompts and fixtures are public or synthetic, versioned, and tied
-  to an observable behavior or boundary;
+- examples use public or synthetic data;
+- evaluation prompts and fixtures are versioned and tied to an observable behavior or boundary;
 - deterministic evaluation validation passes without provider credentials;
 - deterministic scripts have been executed successfully;
-- the catalog passes `npm run check`, including TypeScript, skill validation, and validator tests;
-- a reviewer can explain what the artifact does, does not do, and why it is public.
+- the catalog passes `npm run check`, including TypeScript, skill validation, and validator tests; and
+- a reviewer can explain the artifact's purpose, scope, limits, and public value.
 
 ## Provenance and third-party material
 
-Generalization does not erase authorship. Before publishing a skill, trace its history through local lockfiles, Git history, skills.sh, and the upstream repository as applicable.
+Trace each skill through Git history, lockfiles, skills.sh, and upstream repositories as applicable.
 
-- Record every skill in `skill-provenance.json`, including Inttegro-authored skills.
-- If any material came from a skills.sh package or GitHub repository, name and link the upstream skill and repository in both `PROVENANCE.md` and the affected `SKILL.md`.
-- Describe the relationship honestly: unchanged copy, adapted copy, derived rewrite, or original synthesis.
-- Preserve the upstream copyright and license notice inside the independently installable skill directory whenever the license requires it.
-- Do not describe copied or adapted material as independently authored merely because filenames, structure, wording, or platform metadata changed.
-- If the exact imported revision was not recorded, say `not recorded`; do not substitute the current upstream revision.
+- Record every skill in `skill-provenance.json`.
+- Name and link upstream packages and repositories in both `PROVENANCE.md` and the affected `SKILL.md`.
+- Describe the relationship accurately: unchanged copy, adapted copy, derived rewrite, or original synthesis.
+- Preserve upstream copyright and license notices inside independently installable skill directories whenever required.
+- Label copied and adapted material according to its actual relationship with the source.
+- Use `not recorded` when the exact imported revision is unavailable.
 
-Publication is blocked when provenance or redistribution rights cannot be established.
+Every release needs established provenance and redistribution rights.

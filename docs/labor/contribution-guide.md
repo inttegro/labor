@@ -1,35 +1,35 @@
 ---
 title: Contribute to Labor
 sidebarTitle: Contributing
-description: Propose a portable skill, evaluation, tool, or example and prove that it meets Labor's public boundary.
+description: Improve a skill, add a public evaluation, or contribute a reusable workflow to Labor.
 ---
 
-Good contributions improve a maintained artifact, generalize a proven workflow, expose a meaningful evaluation failure, or add deterministic validation.
+Start with a problem that another team can recognize and a change they can verify. Strong contributions sharpen an existing skill, add useful validation, expose an evaluation gap, or package a reusable workflow.
 
-Open an issue before starting a large package or architectural change so maintainers can agree on the public boundary and maintenance plan.
+For a large package or architectural change, open an issue first. This gives contributors and maintainers space to agree on scope, public value, and long-term maintenance.
 
 ## Prepare the change
 
 1. Fork or clone [`inttegro/labor`](https://github.com/inttegro/labor).
 2. Create a focused branch.
-3. Make the smallest coherent change.
-4. Update catalog, routing, provenance, and license files when the artifact requires them.
-5. Run:
+3. Build the smallest complete change.
+4. Update the catalog, routing cases, provenance, and license files that describe it.
+5. Run the repository checks:
 
 ```bash
 npm ci
 npm run check
 ```
 
-## Open the pull request
+## Explain the change
 
 Explain:
 
-- the behavior being added or changed;
-- why the artifact belongs in a public, product-independent repository;
-- any security or redistribution implications; and
-- the validation you performed.
+- the behavior you added or changed;
+- who can use it and for which job;
+- any security, privacy, or redistribution considerations; and
+- the checks you ran.
 
-Never include credentials, customer information, production exports, private source, or internal operating policy.
+Use public or synthetic examples. Keep credentials, personal information, production exports, private source, and restricted operating material out of the repository.
 
-Read [`CONTRIBUTING.md`](https://github.com/inttegro/labor/blob/master/CONTRIBUTING.md) for the full skill and evaluation requirements.
+Read [`CONTRIBUTING.md`](https://github.com/inttegro/labor/blob/master/CONTRIBUTING.md) for the complete skill and evaluation requirements.

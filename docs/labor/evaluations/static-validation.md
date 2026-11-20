@@ -1,8 +1,10 @@
 ---
-title: Validate the routing corpus
+title: Validate the corpus
 sidebarTitle: Static validation
-description: Check every published skill and routing case without provider credentials or model calls.
+description: Check all 22 skills and 78 routing cases locally before running a host evaluation.
 ---
+
+Start with static validation whenever you change a skill description, routing case, or catalog entry. The check uses the files in the repository and makes no provider call.
 
 ## Clone and install
 
@@ -12,20 +14,27 @@ cd labor
 npm ci
 ```
 
-## Validate routing
+## Run the validator
 
 ```bash
 npm run validate:routing
 ```
 
-The current release reports:
+The current release should report:
 
 ```text
 Validated 22 skills with 78 routing cases.
 positive=22 negative=22 ambiguous=22 overlap=12
 ```
 
-The validator loads names and descriptions from the current `SKILL.md` files and rejects missing cases, unknown skills, duplicate prompts, and malformed expectations.
+## What gets checked
+
+The validator reads names and descriptions from the current `SKILL.md` files, then checks:
+
+- coverage for every published skill;
+- references to known catalog names;
+- unique prompts; and
+- valid expectations for each case type.
 
 ## Run the full repository check
 
@@ -33,8 +42,8 @@ The validator loads names and descriptions from the current `SKILL.md` files and
 npm run check
 ```
 
-This adds TypeScript checks, skill and documentation validation, and deterministic tests for the published utilities.
+This command adds TypeScript checks, skill and documentation validation, and deterministic tests for the published utilities.
 
-## Interpret the result correctly
+## Test a host next
 
-Passing static validation means the versioned corpus is complete and internally consistent. To measure a model or host, continue to [Run the routing suite](/labor/evaluations/run-routing).
+A passing result confirms that the versioned corpus is complete and internally consistent. Continue to [Run the routing suite](/labor/evaluations/run-routing) to measure an agent host.

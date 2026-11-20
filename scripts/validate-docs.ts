@@ -24,6 +24,10 @@ function strings(value: unknown, label: string): string[] {
   return value;
 }
 
+function mentionsCount(content: string, count: number, noun: string): boolean {
+  return new RegExp(`\\b${count}\\b[^\\n]{0,40}\\b${noun}\\b`, "i").test(content);
+}
+
 function navigationPages(value: unknown): string[] {
   if (typeof value === "string") return [value];
   const item = record(value, "navigation item");
@@ -74,8 +78,8 @@ const routingCases = corpus.skills.reduce((total, entry, index) => {
 }, corpus.overlap_cases.length);
 
 const home = await readFile(resolve(repositoryRoot, "docs/labor/index.mdx"), "utf8");
-assert(home.includes(`${skills.length} public skills`), "home page skill count is stale");
-assert(home.includes(`${routingCases} routing cases`), "home page routing case count is stale");
+assert(mentionsCount(home, skills.length, "skills"), "home page skill count is stale");
+assert(mentionsCount(home, routingCases, "routing cases"), "home page routing case count is stale");
 
 const catalog = await readFile(resolve(repositoryRoot, "docs/labor/skills/index.mdx"), "utf8");
 for (const skill of skills) {
